@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#edf7e9">
+<title>мяукать — кошачий семплер</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <section class="scene" aria-label="Игровая сцена">
+    <h1 class="sr-only">мяукать — кошачий семплер</h1>
+    <img class="backdrop" src="assets/scene.webp" alt="" width="1440" height="1024" draggable="false">
+    <div id="cats"></div>
+    <div class="flower vertical" style="--x:11.36%;--y:49.55%;--length:35.9%;--size:15.56cqw;--position:81.5%">
+      <input id="volume" type="range" min="0" max="100" value="19" aria-label="Громкость всех голосов" aria-orientation="vertical">
+      <img src="assets/pale.png" alt="" draggable="false">
+      <output for="volume">Громкость</output>
+    </div>
+    <div class="flower horizontal" style="--x:64.4%;--y:50.5%;--length:31.45%;--size:15cqw;--position:73%">
+      <input id="tone" type="range" min="0" max="100" value="73" aria-label="Яркость всех голосов">
+      <img src="assets/blue.png" alt="" draggable="false">
+      <output for="tone">Яркость</output>
+    </div>
+    <div class="flower horizontal" style="--x:64.4%;--y:70.75%;--length:31.45%;--size:15cqw;--position:3%">
+      <input id="echo" type="range" min="0" max="100" value="3" aria-label="Эхо всех голосов">
+      <img src="assets/pink.png" alt="" draggable="false">
+      <output for="echo">Эхо</output>
+    </div>
+    <button id="power" type="button" aria-pressed="false">мяукать</button>
+    <p class="sr-only" id="status" role="status">Звук выключен</p>
+  </section>
+
+  <section class="console" aria-labelledby="settings-title">
+    <header class="console-header">
+      <div>
+        <h2 id="settings-title">Настройки голосов</h2>
+        <p>Включите «мяукать». Нажмите на кота, чтобы он запел, и ещё раз, чтобы остановить. Клавиши <kbd>1</kbd>–<kbd>5</kbd> включают голоса, <kbd>Esc</kbd> глушит все.</p>
+      </div>
+      <button id="stop" type="button">Стоп все</button>
+    </header>
+    <ul class="legend" aria-label="Цветочные регуляторы">
+      <li><img src="assets/pale.png" alt=""> Громкость</li>
+      <li><img src="assets/blue.png" alt=""> Яркость</li>
+      <li><img src="assets/pink.png" alt=""> Эхо</li>
+    </ul>
+    <div id="voices" class="voices"></div>
+  </section>
+</main>
+</body>
+</html>
